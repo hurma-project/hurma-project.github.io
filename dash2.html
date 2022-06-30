@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)https://hurma.spiraservice.net/24/Report/804/Generated.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>&nbsp;Дашборд (релиз 2): Переделка страницы на vue.js и добавление новых виджетов&nbsp;[RQ:1480]</title>
+    
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1065.0" data-gr-ext-installed="">
+    
+    <div class="Reports">
+      
+      <h3 class="hrm-customer-need">Оглавление</h3><ul class="hrm-toc"><li class="hrm-toc-feature">&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1480">Дашборд (релиз 2): Переделка страницы на vue.js и добавление новых виджетов&nbsp;»</a></li><li class="hrm-toc-customer-need">2.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1693">Общие требования к дашборду&nbsp;»</a></li><li class="hrm-toc-user-story">4.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета&nbsp;»</a></li><li class="hrm-toc-user-story">5.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1580">Если необходимые пермишены на доступ в профиль сотрудника присутствуют, Система должна ОТОБРАЖАТЬ ховер на ФИО сотрудника&nbsp;»</a></li><li class="hrm-toc-user-story">9.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1619">Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете&nbsp;»</a></li><li class="hrm-toc-user-story">13.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1673">Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения&nbsp;»</a></li><li class="hrm-toc-user-story">18.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1481">Как ПМ я хочу ОБНОВИТЬ систему&nbsp;»</a></li><li class="hrm-toc-customer-need">23.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1487">Виджет Мой баланс (запрос отсутствий)&nbsp;»</a></li><li class="hrm-toc-user-story">28.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1498">Как Пользователь я хочу СОЗДАТЬ запрос на любое включенное в системе отсутствие &nbsp;»</a></li><li class="hrm-toc-user-story">35.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1499">Как Пользователь я хочу СОЗДАТЬ запрос на конкретное отсутствие, которое вижу в виджете&nbsp;»</a></li><li class="hrm-toc-user-story">37.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1500">Как Пользователь я хочу ОТКРЫТЬ отчет по своим отсутствиям&nbsp;»</a></li><li class="hrm-toc-customer-need">41.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1488">Виджет Отсутствия сегодня&nbsp;»</a></li><li class="hrm-toc-customer-need">48.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1489">Виджет Дни рождения&nbsp;»</a></li><li class="hrm-toc-customer-need">52.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1490">Виджет Администрация&nbsp;»</a></li><li class="hrm-toc-user-story">56.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1504">Как Пользовать я хочу ИЗМЕНИТЬ список сотрудников в Администрации компании&nbsp;»</a></li><li class="hrm-toc-user-story">61.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1605">Как Пользователь я хочу НАПИСАТЬ email сотруднику из Администрации&nbsp;»</a></li><li class="hrm-toc-user-story">63.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1606">Как Пользователь я хочу НАПИСАТЬ/ПОЗВОНИТЬ по указанному телефону сотруднику из Администрации&nbsp;»</a></li><li class="hrm-toc-user-story">65.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1604">Как Пользователь я хочу СКОПИРОВАТЬ телефон/email сотрудника из Администрации&nbsp;»</a></li><li class="hrm-toc-customer-need">69.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1491">Виджет Мои задачи&nbsp;»</a></li><li class="hrm-toc-user-story">74.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1511">Как Пользователь я хочу СОЗДАТЬ Персональную задачу из виджета&nbsp;»</a></li><li class="hrm-toc-user-story">80.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1512">Как Пользователь я хочу ОТКРЫТЬ любую свою задачу из виджета&nbsp;»</a></li><li class="hrm-toc-user-story">83.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1629">Как Пользовать я хочу ПРОСМОТРЕТЬ, ОТПРАВИТЬ, ИЗМЕНИТЬ и УДАЛИТЬ комментарий к задаче&nbsp;»</a></li><li class="hrm-toc-user-story">86.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1632">Как Пользователь я хочу ИЗМЕНИТЬ персональную задачу из МО просмотра задачи&nbsp;»</a></li><li class="hrm-toc-user-story">93.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1640">Как Пользователь я хочу УДАЛИТЬ персональную задачу из МО просмотра задачи&nbsp;»</a></li><li class="hrm-toc-user-story">99.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1633">Как Пользователь я хочу ОТКРЫТЬ на отдельную страницу задачу из МО просмотра задачи&nbsp;»</a></li><li class="hrm-toc-user-story">103.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1705">Как Пользователь я хочу СКОПИРОВАТЬ ссылку на задачу&nbsp;»</a></li><li class="hrm-toc-user-story">107.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1709">Как Пользователь я хочу ИЗМЕНИТЬ статус задачи&nbsp;»</a></li><li class="hrm-toc-customer-need">112.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1493">Виджет Запросы&nbsp;»</a></li><li class="hrm-toc-user-story">116.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1768">Как Пользователь я хочу ПЕРЕЙТИ В список текущих запросов&nbsp;»</a></li><li class="hrm-toc-user-story">121.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1770">Как Пользователь я хочу ПЕРЕЙТИ В список запросов, в которых я ответственный&nbsp;»</a></li><li class="hrm-toc-user-story">126.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1514">Как Пользователь я хочу ОТКРЫТЬ любой запрос, в котором я ответственный из виджета&nbsp;»</a></li><li class="hrm-toc-customer-need">129.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1494">Виджет На испытательном периоде&nbsp;»</a></li><li class="hrm-toc-customer-need">135.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1495">Виджет События&nbsp;»</a></li><li class="hrm-toc-user-story">138.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1534">Как Пользователь я хочу ОТКРЫТЬ для просмотра все события компании&nbsp;»</a></li><li class="hrm-toc-user-story">141.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1572">Система должна на странице просмотра всех событий компании ОТОБРАЖАТЬ события согласно дизайну&nbsp;»</a></li><li class="hrm-toc-user-story">143.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1568">Как пользователь я хочу из виджета ОТКРЫТЬ для просмотра одно из ближайших событий компании&nbsp;»</a></li><li class="hrm-toc-user-story">145.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1570">Система должна ОТОБРАЖАТЬ страницу просмотра одного события согласно дизайну&nbsp;»</a></li><li class="hrm-toc-customer-need">146.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1496">Виджет О компании&nbsp;»</a></li><li class="hrm-toc-user-story">149.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1527">Как Пользователь я хочу ОТКРЫТЬ для просмотра всю информацию о компании&nbsp;»</a></li><li class="hrm-toc-user-story">153.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1522">Как Пользователь я хочу ИЗМЕНИТЬ информацию о компании&nbsp;»</a></li><li class="hrm-toc-customer-need">160.&nbsp;<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1492">Виджет Открытые опросы&nbsp;»</a></li></ul><div class="hrm-item" style="page-break-before: always;"><h2 class="hrm-feature">Название релиза</h2><h3 class="hrm-customer-need">Потребность клиента</h3><h3 class="hrm-user-story">Действие с объектом системы</h3><h4 class="hrm-requirement">Функциональное требование к действию над объектом</h4><h4 class="hrm-nfr">Нефункциональное требование (ui, ux)</h4></div><div class="hrm-item"><h2 class="hrm-feature title" style="page-break-before: always;">&nbsp;<a name="RQ1480"></a>Дашборд (релиз 2): Переделка страницы на vue.js и добавление новых виджетов&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1480.aspx">RQ:1480</a>]</small></h2><div class="hrm-description2">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=33160%3A209699">Дизайн</a> для фичи и
+<a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=33160%3A209709">
+здесь</a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Отдельный экран</a> со всеми виджетами подробнее с их размерами и состояниями</p>
+<p>Тексты и переводы - <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Dashboard-ccd5710114ba4e1b91497096502f3a22">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">2.&nbsp;<a name="RQ1693"></a>Общие требования к дашборду&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1693.aspx">RQ:1693</a>&nbsp;/&nbsp;Customer Need]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">3.&nbsp;<a name="RQ1691"></a>Система должна ОТОБРАЖАТЬ в новом дашборде сегодняшнюю дату и день недели согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1691.aspx">RQ:1691</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a></p>
+<p>Тексты и переводы - еще нет в ЮИ кор не нашла предварительно в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#f86916744220412893acd65a6a7443ea">
+notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1691-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-user-story">4.&nbsp;<a name="RQ1578"></a>Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">RQ:1578</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2">
+<p>В каких конкретно виджетах доступен функционал указано в связанных требованиях</p>
+</div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Виджет Запросы.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1493">RQ:1493</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1493.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Мои задачи.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1491">RQ:1491</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1491.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Администрация.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1490">RQ:1490</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1490.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Дни рождения.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1489">RQ:1489</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1489.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Отсутствия сегодня.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1488">RQ:1488</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1488.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет На испытательном периоде.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1494">RQ:1494</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1494.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h3 class="hrm-user-story">5.&nbsp;<a name="RQ1580"></a>Если необходимые пермишены на доступ в профиль сотрудника присутствуют, Система должна ОТОБРАЖАТЬ ховер на ФИО сотрудника&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1580.aspx">RQ:1580</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2">
+<p>Согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">
+дизайну</a>&nbsp;</p>
+<ul>
+<li>виджет “Отсутствия сегодня” в дизайне 2.2</li><li>виджет “Дни рождения” в дизайне &nbsp;3.2</li><li>виджет “Администрация” в дизайне 4.4</li><li>виджет “Запросы”, таб “Все ”в &nbsp;дизайне 6.1 - обратить внимание на то, что ховер на ФИО только в табе “все”, на ФИО сотрудника сделавшего запрос</li><li>виджет “На испытательном периоде” в дизайне 7.1</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">6.&nbsp;<a name="RQ1581"></a>Если необходимые пермишены на доступ в профиль сотрудника присутствуют, после клика на ФИО и/или Аватар Система должна ПЕРЕНАПРАВИТЬ Пользователя в профиль сотрудника&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1581.aspx">RQ:1581</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>виджет “Отсутствия сегодня” в дизайне 2.2</p>
+<ul>
+<li>виджет “Дни рождения” в дизайне &nbsp;3.2</li><li>виджет “Администрация” в дизайне 4.4</li><li>виджет “Мои задачи” в дизайне 5.2, &nbsp;на аватарке</li><li>виджет “Запросы”, таб “все” в &nbsp;дизайне 6.1 - обратить внимание на то, что есть два место: ФИО того кто сделал запрос, и аватар того, кто ответственный</li><li>виджет “На испытательном периоде” в дизайне 7.1</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">7.&nbsp;<a name="RQ1579"></a>Система должна проверить доступ в профиль сотрудника согласно пермишенам&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1579.aspx">RQ:1579</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Описано на отдельной странице в ноушен</p>
+<ul>
+<li>проверяем по доступу в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/f589b1d6a0ef4ac0a15c9877d65592dc">
+профиль сотрудника</a></li><li>затем проверяем на видимость сотрудника согласно настройкам <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408">
+глобальной видимости&nbsp;</a></li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">8.&nbsp;<a name="RQ1612"></a>Если ФИО Сотрудника не помещается в строку, или отсутствует, то Система должна ОТОБРАЖАТЬ тултип согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1612.aspx">RQ:1612</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>ФИО Обрезается, и есть тултип при наведении на ФИО:</p>
+<p>&nbsp;Согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">
+дизайну</a>&nbsp;</p>
+<ul>
+<li>виджет “Отсутствия сегодня” в дизайне 2.2</li><li>виджет “Дни рождения” в дизайне &nbsp;3.2</li><li>виджет “Администрация” в дизайне 4.4</li><li>виджет “Запросы” в &nbsp;дизайне 6.2&nbsp;</li><li>виджет “На испытательном периоде” в дизайне 7.1</li></ul>
+<p>&nbsp;</p>
+<p>Тултип есть в том числе и тогда, когда ФИО отсутствует, а отображается только аватар:</p>
+<ul>
+<li>виджет “Запросы” в &nbsp;дизайне 6.2 - аватар ответственного</li><li>виджет “Мои задачи” в дизайне 5.2 - аватар объекта&nbsp;</li></ul>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">9.&nbsp;<a name="RQ1619"></a>Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1619.aspx">RQ:1619</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2">
+<p>Функция доступна по кнопке “еще n” в таких виджетах:</p>
+<ul>
+<li>Отсутствия сегодня</li><li>Дни рождения</li><li>Мои задачи</li><li>Запросы</li><li>На испытательном периоде</li></ul>
+</div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Виджет На испытательном периоде.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1494">RQ:1494</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1494.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Запросы.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1493">RQ:1493</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1493.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Мои задачи.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1491">RQ:1491</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1491.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Дни рождения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1489">RQ:1489</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1489.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Отсутствия сегодня.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1488">RQ:1488</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1488.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">10.&nbsp;<a name="RQ1620"></a>Система должна ОТОБРАЖАТЬ кнопку для просмотра всего контента в виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1620.aspx">RQ:1620</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> для виджетов:</p>
+<ul>
+<li>2. Отсутствия сегодня, 2.2</li><li>3. Дни рождения, 3.1</li><li>5. Мои задачи, 5.1</li><li>6. Запросы, 6.1</li><li>7. На испытательном периоде, 7.1</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8057.aspx"></div></div><div class="hrm-item"><h4 class="hrm-nfr">11.&nbsp;<a name="RQ1621"></a>После клика на кнопку Система должна ОТОБРАЖАТЬ списком весь доступный контент в виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1621.aspx">RQ:1621</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> для виджетов:</p>
+<ul>
+<li>2. Отсутствия сегодня, 2.3</li><li>3. Дни рождения, 3.2</li><li>5. Мои задачи, 5.2</li><li>6. Запросы, 6.2</li><li>7. На испытательном периоде, 7.2</li></ul>
+<p>&nbsp;</p>
+<p>Размер виджета увеличивается</p>
+<p>Появляется скролл</p>
+<p>Кнопка “еще n” меняется на кнопку “свернуть"</p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">12.&nbsp;<a name="RQ1694"></a>Если контента меньше в виджете чем размер виджета, Система должна УБРАТЬ отображение кнопки&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1694.aspx">RQ:1694</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">13.&nbsp;<a name="RQ1673"></a>Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1673.aspx">RQ:1673</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2">
+<p>Функция доступна по кнопке “свернуть” в таких виджетах:</p>
+<ul>
+<li>Отсутствия сегодня</li><li>Дни рождения</li><li>Мои задачи</li><li>Запросы</li><li>На испытательном периоде</li></ul>
+</div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Виджет На испытательном периоде.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1494">RQ:1494</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1494.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Запросы.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1493">RQ:1493</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1493.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Мои задачи.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1491">RQ:1491</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1491.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Дни рождения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1489">RQ:1489</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1489.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Виджет Отсутствия сегодня.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1488">RQ:1488</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1488.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">14.&nbsp;<a name="RQ1675"></a>Система должна ОТОБРАЖАТЬ кнопку для сворачивания списка всего доступного контента&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1675.aspx">RQ:1675</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> для виджетов:</p>
+<ul>
+<li>2. Отсутствия сегодня, 2.3</li><li>3. Дни рождения, 3.2</li><li>5. Мои задачи, 5.2</li><li>6. Запросы, 6.2</li><li>7. На испытательном периоде, 7.2</li></ul>
+<p>&nbsp;</p>
+<p>Не забыть про ховер (как в 2.2)</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8056.aspx"></div></div><div class="hrm-item"><h4 class="hrm-nfr">15.&nbsp;<a name="RQ1674"></a>После клика на кнопку Система должна ОТОБРАЖАТЬ список который помещается в стандартную высоту виджета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1674.aspx">RQ:1674</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">16.&nbsp;<a name="RQ1774"></a>При переключении по табам в пределе одного виджета Система должна ОТОБРАЖАТЬ выбранное ранее положение списка (свернутое, развернутое)&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1774.aspx">RQ:1774</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">17.&nbsp;<a name="RQ1775"></a>После перезагрузки страницы Система должна ОТОБРАЖАТЬ списки в ограниченном (схлопнутом) состоянии, даже если они были раскрыты до обновления&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1775.aspx">RQ:1775</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Ограниченное (схлопнутое состояние) - это виджет стандартной высоты с кнопкой “еще n”</p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">18.&nbsp;<a name="RQ1481"></a>Как ПМ я хочу ОБНОВИТЬ систему&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1481.aspx">RQ:1481</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">19.&nbsp;<a name="RQ1485"></a>На страницах просмотра, создания, дублирования и редактирования роли Система должна по умолчанию УСТАНОВИТЬ вариант "Расписание" в селекторе выбора раздела  &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1485.aspx">RQ:1485</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Для редактирования это правило действует <strong>только</strong>, если на странице просмотра не был выбран
+<i>другой</i> вариант в селекторе.</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">20.&nbsp;<a name="RQ1482"></a>Система должна УДАЛИТЬ привязку к выбранному дашборду для всех кастомных и дефолтных ролей&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1482.aspx">RQ:1482</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">21.&nbsp;<a name="RQ1483"></a>На страницах создания, редактирования, дублирования и просмотра роли Система должна СКРЫТЬ вариант "Обзор из селектора" &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1483.aspx">RQ:1483</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>На страницах создания, редактирования, дублирования и просмотра роли Система должна СКРЫТЬ вариант "Обзор из селектора"&nbsp;</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1483-Screenshot.png"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8028.aspx"></div></div><div class="hrm-item"><h4 class="hrm-requirement">22.&nbsp;<a name="RQ1486"></a>Система должна УСТАНОВИТЬ всем ролям по умолчанию один дефолтный тип дашборда на vue&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1486.aspx">RQ:1486</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Правила наполнения дашборда разными виджетами описано в каждом конкретном виджете (например виджет есть по умолчанию или подчиняется определенным пермишенам)</p>
+<p>Все требования на добавление виджетов добавлены в раздел “связанные требования” к этому требованию</p>
+</div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">23.&nbsp;<a name="RQ1487"></a>Виджет Мой баланс (запрос отсутствий)&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1487.aspx">RQ:1487</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как сотруднику, необходимо иметь возможность воспользоваться отсутствием по месту: объявить о том, что заболел, о том, что хочу запланировать отпуск, о том, что хочу взять отгул или за свой счет, а не бегать по всей системе в поиске нужной кнопки</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=7b13a607cdbc4aaea361706bae605309"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1487-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">24.&nbsp;<a name="RQ1497"></a>Система должна ДОБАВИТЬ в виджет баланс по отсутствиям: Отпуск, Больничный, Со Справкой, Из дома если они включены в системе&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1497.aspx">RQ:1497</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>В дизайне только 3 иконки. Но если включены вышеперечисленные отсутствия иконки должно быть 4</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">25.&nbsp;<a name="RQ1659"></a>Система должна ОТОБРАЖАТЬ в виджете баланс по отсутствиям согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1659.aspx">RQ:1659</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (1. Мой баланс, и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 3 колонки в ширину</p>
+<p>Тексты и переводы для виджета в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#bc43a3c7c2a74c2da8ce94d595096c1e">
+notion</a></p>
+<p><strong>ВАЖНО!</strong></p>
+<ul>
+<li>Если отсутствие, которое есть на виджете отключается, то другие отсутствия сдвигаются таким образом чтобы была одна строка с отсутствиями, и затем, оставшиеся отсутствия расширяются, чтобы занять площадь одной строки в виджете</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8032.aspx">
+<ul>
+<li>Если установлена настройка “лимит дней” и в поле “лимит дней” установлено -1, то на отсутствии НЕ ОТОБРАЖАЕТСЯ фраза “по запросу”, она будет добавлена в тултип. (см другое требование - RO:1649)</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8030.aspx"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8029.aspx">
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">26.&nbsp;<a name="RQ1649"></a>При наведении на иконку с балансом отсутствий Система должна ОТОБРАЖАТЬ тултип с данными по отсутствию&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1649.aspx">RQ:1649</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (1-Мой баланс, “ховеры” 1.1,1 .2, 1.3 - максимально вправо)</p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">27.&nbsp;<a name="RQ1670"></a>Система должна УБРАТЬ виджет из дашборда, если отключены все отсутствия в системе, и в роли отсутствуют экшены на создание запроса&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1670.aspx">RQ:1670</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Отключены в системе отсутствия отображаемые на виджете:</p>
+<ul>
+<li>0тпуск</li><li>Больничный</li><li>Со справкой</li><li>Из дома</li></ul>
+<p>и все остальные, которых нет на виджете</p>
+<p>+ отсутствуют экшены “создание запросов на отсутствия” в настройке роли</p>
+<table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;Система должна ДОБАВИТЬ кнопку для запроса отсутствия, если присутствуют соответсвующие экшены в роли.&nbsp;Если условия из связанных требования НЕ выполнены - виджет НЕ отображать&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1669">RQ:1669</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1669.aspx">»</a>]</small></p></td></tr><tr><td><p>зависит от&nbsp;Система должна ДОБАВИТЬ в виджет баланс по отсутствиям: Отпуск, Больничный, Со Справкой, Из дома если они включены в системе.&nbsp;Если условия из связанных требования НЕ выполнены - виджет НЕ отображать&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1497">RQ:1497</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1497.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h3 class="hrm-user-story">28.&nbsp;<a name="RQ1498"></a>Как Пользователь я хочу СОЗДАТЬ запрос на любое включенное в системе отсутствие &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1498.aspx">RQ:1498</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">29.&nbsp;<a name="RQ1669"></a>Система должна ДОБАВИТЬ кнопку для запроса отсутствия, если присутствуют соответсвующие экшены в роли&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1669.aspx">RQ:1669</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Проверяем права по двум экшенам.</p>
+<ul>
+<li>Если есть хоть один - кнопка отображается</li><li>Если есть два - кнопка отображается</li><li>Если нет ни одного - кнопка НЕ отображается</li></ul>
+<p>&nbsp;</p>
+<p>Экшен №1: Настройки роли - профиль - <u>профиль</u> - действия - “Создание запросов на отсутствие”</p>
+<p>Экшен №2: Настройки роли - профиль - <u>календарь</u> - действия - “Создание запросов на отсутствие”</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8054.aspx"></div></div><div class="hrm-item"><h4 class="hrm-nfr">30.&nbsp;<a name="RQ1660"></a>Система должна ОТОБРАЖАТЬ кнопку для запроса отсутствия&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1660.aspx">RQ:1660</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> кнопки на виджете (1-Мой баланс, и правее “Ховеры” 1.1,1.2,1.3)</p>
+<p>Обратите внимание, на то, что если размер виджета меньше - кнопка становится “+” сверху.</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">31.&nbsp;<a name="RQ1661"></a>После клика на кнопку для запроса отсутствия Система должна ОТКРЫТЬ МО для запроса&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1661.aspx">RQ:1661</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">32.&nbsp;<a name="RQ1662"></a>Система должна ОТОБРАЖАТЬ МО для запроса отсутствия согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1662.aspx">RQ:1662</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><span><strong>ВАЖНО: </strong>Если МО было открыто кликом на иконку конкретного типа отсутствия (описано ниже), то Система должна УСТАНОВИТЬ в МО запроса в селекторе для выбора отсутствия
+<u>сразу то отсутствие, на иконку которого кликнул Пользователь</u>.</span></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=30988%3A195607"><span>Дизайн</span></a><span> МО для запроса</span></p>
+<ul>
+<li><span>МО расположено в центре экрана, фон страницы затемнен.</span></li><li><span>Если с загрузка МО занимает время - добавить лоадер хурмы</span></li></ul>
+<p>&nbsp;</p>
+<p><span>МО уже используется в системе в календаре и в старом дашборде.</span></p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">33.&nbsp;<a name="RQ1663"></a>После клика на кнопку подтверждения запроса в МО создания запроса система должна ОТПРАВИТЬ запрос&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1663.aspx">RQ:1663</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">34.&nbsp;<a name="RQ1664"></a>После клика на кнопку подтверждения запроса в МО создания запроса Система должна ЗАКРЫТЬ МО и ОТОБРАЗИТЬ сообщение об успешной/не успешной отправке&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1664.aspx">RQ:1664</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=30988%3A195912">Дизайн</a></p>
+<p>Тексты и переводы в дизайне</p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">35.&nbsp;<a name="RQ1499"></a>Как Пользователь я хочу СОЗДАТЬ запрос на конкретное отсутствие, которое вижу в виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1499.aspx">RQ:1499</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">36.&nbsp;<a name="RQ1665"></a>После клика на иконку конкретного отсутствия Система должна ОТКРЫТЬ МО для запроса&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1665.aspx">RQ:1665</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;После клика на кнопку подтверждения запроса в МО создания запроса Система должна ЗАКРЫТЬ МО и ОТОБРАЗИТЬ сообщение об успешной/не успешной отправке&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1664">RQ:1664</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1664.aspx">»</a>]</small></p></td></tr><tr><td><p>зависит от&nbsp;После клика на кнопку подтверждения запроса в МО создания запроса система должна ОТПРАВИТЬ запрос&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1663">RQ:1663</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1663.aspx">»</a>]</small></p></td></tr><tr><td><p>зависит от&nbsp;Система должна ОТОБРАЖАТЬ МО для запроса отсутствия согласно дизайну&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1662">RQ:1662</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1662.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h3 class="hrm-user-story">37.&nbsp;<a name="RQ1500"></a>Как Пользователь я хочу ОТКРЫТЬ отчет по своим отсутствиям&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1500.aspx">RQ:1500</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">38.&nbsp;<a name="RQ1666"></a>Система должна ОТОБРАЖАТЬ кнопку для просмотра отчета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1666.aspx">RQ:1666</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (1-Мой баланс, и все что правее, “Ховеры” 1.1,1.2,1.3)</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">39.&nbsp;<a name="RQ1667"></a>После клика на кнопку для просмотра отчета система должна ОТКРЫТЬ МО отчета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1667.aspx">RQ:1667</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">40.&nbsp;<a name="RQ1668"></a>В МО просмотра Отчета Система должна ОТОБРАЖАТЬ только те отсутствия, которые были использованы в конкретном году&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1668.aspx">RQ:1668</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Новое поведение.</p>
+<p>Ранее отображались все отсутствия, даже если по ним небыли установлены отсутствия в конкретном году.</p>
+<p><strong>Сейчас поведение необходимо изменить: </strong>отображать для конкретного года только те отсутствия в МО отчета, которые были использованы, т.е по которым были утверждены отсутствия и/или установлены вручную в расписании</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=33160%3A205025">Дизайн</a>&nbsp;</p>
+<p>При переключении по годам отображать состояние для выбранного года.</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1668-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">41.&nbsp;<a name="RQ1488"></a>Виджет Отсутствия сегодня&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1488.aspx">RQ:1488</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как сотруднику, необходимо видеть состав моей команды и их текущие и будущие отсутствия, чтобы планировать свою работу Мне, как ответственному/тимлиду, необходимо видеть состав моих подчиненных и их текущие и будущие отсутствия, чтобы планировать мою работу</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=14849e9a304947b3a96b7fba6624c6d7"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8034.aspx"></div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">RQ:1578</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1673">RQ:1673</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1673.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1619">RQ:1619</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1619.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-requirement">42.&nbsp;<a name="RQ1616"></a>Система должна ДОБАВЛЯТЬ в список сотрудников по определенным отсутствиям &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1616.aspx">RQ:1616</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Система должна ДОБАВЛЯТЬ в список сотрудников по определенным отсутствиям:</p>
+<ul>
+<li>Отпуск</li><li>Больничный</li><li>Со справкой</li><li>Из дома</li><li>За свой счет</li><li>Командировка</li><li>Перенос ОТКУДА</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">43.&nbsp;<a name="RQ1617"></a>Система должна ДОБАВЛЯТЬ в список только сотрудников с утвержденными отсутствиями на полный или не полный день&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1617.aspx">RQ:1617</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-requirement">44.&nbsp;<a name="RQ1618"></a>Система должна ДОБАВЛЯТЬ в список сотрудников у которых отсутствие имеет дату начала сегодня, период отсутствие попадает на сегодняшний день, окончание отсутствия попадает на сегодняшний день&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1618.aspx">RQ:1618</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-requirement">45.&nbsp;<a name="RQ1672"></a>Система должна ДОБАВЛЯТЬ в виджет только тех сотрудников, которые доступны для просмотра Пользователю&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1672.aspx">RQ:1672</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Согласно настроек <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408">
+глобальной видимости</a></p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">46.&nbsp;<a name="RQ1501"></a>Система должна ОТОБРАЖАТЬ отсутствия сегодня согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1501.aspx">RQ:1501</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (2. Отсутствия сегодня, и правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (экран на который ссылка и правее, в зависимости от разрешения экрана)</p>
+<p>Если разрешение экрана меньше, то есть ховер на строку и тултип с детальной информацией.
+<a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">
+Дизайн</a> (2. Отсутствия сегодня, 2.1 и 2.2)</p>
+<p>Тексты и переводы для виджета в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#bc43a3c7c2a74c2da8ce94d595096c1e">
+notion</a></p>
+<p>Размер виджета (ширина) 3 колонки</p>
+<ul>
+<li>В счетчике учитываются все отсутствия сегодня: которые сразу отображены, и которые доступны по кнопке “еще"</li><li>Фильтрация сотрудников происходит по ФИО, по алфавиту, как везде в системе</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">47.&nbsp;<a name="RQ1671"></a>Если в виджете отсутствует контент Система должна ОТОБРАЖАТЬ заглушку с текстом&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1671.aspx">RQ:1671</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (2. Отсутствуют сегодня, 2.0)</p>
+<p>Тексты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#bc43a3c7c2a74c2da8ce94d595096c1e">
+notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8115.aspx"></div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">48.&nbsp;<a name="RQ1489"></a>Виджет Дни рождения&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1489.aspx">RQ:1489</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как сотруднику, важно видеть ближайшие дни рождения коллег, с которыми я общаюсь.</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=a679c67d90e64ec98648dd82fff99939"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8035.aspx"></div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">RQ:1578</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1673">RQ:1673</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1673.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1619">RQ:1619</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1619.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">49.&nbsp;<a name="RQ1502"></a>Система должна ОТОБРАЖАТЬ ДР сотрудников согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1502.aspx">RQ:1502</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (3. Дни рождения, и правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> и расположение виджета на дашборде (и правее)</p>
+<p>Размер виджета (ширина) - 3 колонки</p>
+<p>Тексты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#1567cd027a7b4357aa0369f7e3976062">
+notion</a></p>
+<ul>
+<li>В это виджете, <u>возле кнопки “еще” </u><strong><u>нет</u></strong><u> числа</u>, которое в других виджетах показывает сколько строк скрыто</li><li>В счетчике сотрудников учитываются ДР, которые <strong><u>сегодня</u></strong>&nbsp;</li><li>Иконка “подарок” отображается напротив сотрудников у которых ДР сегодня, если помещается (см.дизайн для разной ширины)</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1502-Screenshot.png">
+<p>Принцип отображения сотрудников в блоках:</p>
+<ul>
+<li>В блоке “Сегодня” отображаются ДР сотрудников текущего дня до 00.00</li><li>В блоке “На этой неделе” отображаются ДР с завтрашнего дня 00.01 до воскресенья текущей недели 00.00</li><li>В блоке “Ближайшие” отображаются ДР с понедельника следующей недели 00.01 <strong>
+на период год вперед (сегодняшнюю дату не учитываем в следующем году)</strong></li></ul>
+<p><strong>Например: </strong>сегодня 10 февраля, ДР, которые 10го отобразим за сегодня, дальше все что на этой неделе, и далее ближайшие на 1 год вперед, по дату вчерашнего дня включительно = последнее ДР в списке будет 9 февраля в след.году</p>
+<p>&nbsp;</p>
+<p>Дополнительные требования по отображению блоков:</p>
+<ul>
+<li>Если есть ДР сегодня, отображать блок “сегодня”, если нет - не отображать блок</li><li>Если есть ДР на этой неделе, отображать блок "на этой неделе", если нет - не отображать блок</li><li>Если есть ДР позже воскресенья этой недели, отображать блок “ближайшие”, если нет - не отображать блок</li></ul>
+<p>&nbsp;</p>
+<p>Дополнительные требования по фильтрации сотрудников в блоках:</p>
+<ul>
+<li>Фильтрация в блоке "Сегодня" по ФИО, как и везде в системе</li><li>Фильтрация в блоке “На этой неделе” и в блоке “Ближайшие” по дате ДР (ближайшая дата - сотрудник выше), если дата одинаковая - по ФИО</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">50.&nbsp;<a name="RQ1676"></a>Система должна ДОБАВИТЬ в виджет только тех сотрудников, которые доступны для просмотра Пользователею&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1676.aspx">RQ:1676</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Согласно настройкам <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408">
+глобальной видимости&nbsp;</a></p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">51.&nbsp;<a name="RQ1602"></a>Если в Системе отсутствуют информация по ДР сотрудников, Система должна ОТОБРАЖАТЬ сам виджет, и в нем заглушкe&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1602.aspx">RQ:1602</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (3.0)</p>
+<p>Тексты и переводы &nbsp;в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#1567cd027a7b4357aa0369f7e3976062">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">52.&nbsp;<a name="RQ1490"></a>Виджет Администрация&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1490.aspx">RQ:1490</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как сотруднику, важно знать контакты ключевых сотрудников</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=8cfb919ce188428199b2db5762d21875"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1490-Screenshot.png"></div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">RQ:1578</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">53.&nbsp;<a name="RQ1503"></a>Система должна ОТОБРАЖАТЬ виджет согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1503.aspx">RQ:1503</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (4. Администрация, и правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (экран на который ссылка и правее, в зависимости от разрешения экрана)</p>
+<p>Если разрешение экрана меньше, то есть ховер на ФИО и тултип с ФИО. <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">
+Дизайн</a> (4. Администрация, 4.4)</p>
+<p>Тексты и переводы для виджета в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#2b7c14430517449b80a2123f1e112978">
+notion</a></p>
+<p>Размер виджета (ширина) 3 колонки</p>
+<p><i>Сортировка сотрудников</i> в виджете по дате добавления: ранее добавленные сверху, позже добавленные снизу (чтобы можно было в начале выбрать СЕО, сохранить, затем выбрать HR директора, сохранить, затем остальных).&nbsp;</p>
+<p><u>Есть нюанс: </u>Если в МО редактирования одновременно выбрано несколько сотрудников, и технически, вероятно сложно чекать какой чекбокс был активен раньше до сохранения. В таком случае, допускается после сохранения отображать в виджете только выбранных в МО редактирования сотрудников в алфавитном порядке&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">54.&nbsp;<a name="RQ1680"></a>Система должна ДОБАВЛЯТЬ в виджет только тех сотрудников, которые добавлены в Администрацию, которых может видеть Пользователь&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1680.aspx">RQ:1680</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Согласно настройкам <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408">
+глобальной видимости&nbsp;</a></p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">55.&nbsp;<a name="RQ1603"></a>Если в Администрацию не добавлены сотрудники, которых Пользователь может видеть, Система должна ОТОБРАЖАТЬ сам виджет, и в нем заглушку&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1603.aspx">RQ:1603</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (4.0)</p>
+<p>Тексты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#2b7c14430517449b80a2123f1e112978">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">56.&nbsp;<a name="RQ1504"></a>Как Пользовать я хочу ИЗМЕНИТЬ список сотрудников в Администрации компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1504.aspx">RQ:1504</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">57.&nbsp;<a name="RQ1505"></a>Система должна ДОБАВИТЬ кнопку для редактирования всем Пользователям, у которых включен пермишен "да" для Общих настроек в настройках роли&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1505.aspx">RQ:1505</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Пермишен “да” установлен &nbsp;кнопка для редактирования есть в виджете</p>
+<p>Пермишен “нет” установлен - кнопки для редактирования нет в виджете</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8038.aspx"></div></div><div class="hrm-item"><h4 class="hrm-nfr">58.&nbsp;<a name="RQ1506"></a>Система должна после клика на кнопку для редактирования ОТОБРАЖАТЬ МО для выбора сотрудников&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1506.aspx">RQ:1506</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> кнопки редактирования (4. Администрация, 4.1 - не забыть про синий ховер на карандаше - есть в
+<a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=231%3A1793">
+UI Core</a>)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> &nbsp;МО (4. Администрация, 4.2)</p>
+<p>Тексты и переводы для МО - Есть в системе</p>
+<ul>
+<li>Используется МО, которое уже есть в системе, например в опросах - добавление сотрудника + сортировка по командам (ее можно взять из МО Добавления сотрудника в роль)</li><li>Сотрудники в МО отображаются согласно <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408">
+глобальной видимости&nbsp;</a></li><li>Во время загрузки МО присутствует лоадер хурмы на странице</li><li>Во время отображения МО фон страницы затемнен, МО отображается по центру страницы.
+<a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=30988%3A195607">
+Дизайн</a> страницы во время открытого аналогичен МО запросов&nbsp;</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">59.&nbsp;<a name="RQ1508"></a>После подтверждения сохранения Система должна ЗАКРЫТЬ МО и ОТОБРАЗИТЬ Пользователю актуальную информацию по Администрации в виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1508.aspx">RQ:1508</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-requirement">60.&nbsp;<a name="RQ1507"></a>После сохранения Система должна СОХРАНИТЬ в виджете выбранных Пользователем в МО сотрудников&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1507.aspx">RQ:1507</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;Система должна ОТОБРАЖАТЬ виджет согласно дизайну.&nbsp;И отобразить согласно НФТ&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1503">RQ:1503</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1503.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h3 class="hrm-user-story">61.&nbsp;<a name="RQ1605"></a>Как Пользователь я хочу НАПИСАТЬ email сотруднику из Администрации&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1605.aspx">RQ:1605</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">62.&nbsp;<a name="RQ1608"></a>Система должна ОБРАБАТЫВАТЬ клик на email используя стандартные протоколы mailto: &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1608.aspx">RQ:1608</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">63.&nbsp;<a name="RQ1606"></a>Как Пользователь я хочу НАПИСАТЬ/ПОЗВОНИТЬ по указанному телефону сотруднику из Администрации&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1606.aspx">RQ:1606</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">64.&nbsp;<a name="RQ1607"></a>Система должна ОБРАБАТЫВАТЬ клик на номер телефона используя стандартные протоколы tel: &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1607.aspx">RQ:1607</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Если телефон в не валидном формате, также открывается обработчик, и дальше уже на откуп выбранному месседжеру, что отображается Пользователю.</p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">65.&nbsp;<a name="RQ1604"></a>Как Пользователь я хочу СКОПИРОВАТЬ телефон/email сотрудника из Администрации&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1604.aspx">RQ:1604</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">66.&nbsp;<a name="RQ1609"></a>Система должна ОТОБРАЖАТЬ иконку для копирования напротив телефона/email'а&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1609.aspx">RQ:1609</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> иконки и ховер (4.Администрация 4.3, 4.4, 4.5)</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">67.&nbsp;<a name="RQ1610"></a>После клика на кнопку копирования система должна СОХРАНИТЬ телефон/email в буфер обмена&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1610.aspx">RQ:1610</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">68.&nbsp;<a name="RQ1611"></a>После клика на кнопку копирования система должна ОТОБРАЖАТЬ тултип об успешном копировании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1611.aspx">RQ:1611</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (4. Администрация 4.5)</p>
+</div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">69.&nbsp;<a name="RQ1491"></a>Виджет Мои задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1491.aspx">RQ:1491</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как сотруднику, необходимо видеть назначенные на меня задачи: 1:1</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=353f71cc7fd04ee9a0838f3612b8b6ea"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1491-Screenshot.png"></div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">RQ:1578</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1673">RQ:1673</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1673.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1619">RQ:1619</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1619.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-requirement">70.&nbsp;<a name="RQ1519"></a>Система должна ДОБАВИТЬ виджет на дашборд, если в роли присутствует необходимый пермишен(-ы)&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1519.aspx">RQ:1519</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Проверяем права по пермишенам “да”.</p>
+<ul>
+<li>Если есть хоть один - виджет отображается</li><li>Если есть два - виджет отображается</li><li>Если нет ни одного - виджет НЕ отображается</li></ul>
+<p>&nbsp;</p>
+<p>Доступ №1: Настройки роли - профиль - <u>календарь</u> - пермишен “да”</p>
+<p>Доступ №2: Настройки роли - профиль - профиль - пермишен “да” - <u>мои задачи</u> пермишен "да”&nbsp;</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1519-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">71.&nbsp;<a name="RQ1509"></a>Система должна ОТОБРАЖАТЬ в виджете задачи Пользователя&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1509.aspx">RQ:1509</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (5. Мои задачи, и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 6 колонок</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#e6d060e126784e04802805b82651b375">
+notion</a></p>
+<ul>
+<li>Если дата и время задачи = позже текущего плашка со временем серого цвета</li><li>Если дата и время задачи = ранее &nbsp;текущего, или текущее &nbsp;плашка со временем зелёного &nbsp;цвета</li><li>Если дата отсутствует - плашке не отображается</li></ul>
+<p>&nbsp;</p>
+<p>Сортировка в виджете по дате создания задачи/действия. Сверху отображаются ближайшие к текущей дате и времени (самые новые)</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">72.&nbsp;<a name="RQ1510"></a>Система должна ДОБАВЛЯТЬ в виджет задачи по Рекрутинг, HR действиям и Персональные задачи, которые имеют статус "в работе"&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1510.aspx">RQ:1510</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">73.&nbsp;<a name="RQ1692"></a>Если доступных задач для просмотра нет Система должна ОТОБРАЖАТЬ сам виджет, и в нем заглушку&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1692.aspx">RQ:1692</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (5. Мои задачи, 5.0)</p>
+<p>Тексты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#e6d060e126784e04802805b82651b375">
+notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1692-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-user-story">74.&nbsp;<a name="RQ1511"></a>Как Пользователь я хочу СОЗДАТЬ Персональную задачу из виджета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1511.aspx">RQ:1511</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">75.&nbsp;<a name="RQ1622"></a>Система должна ОТОБРАЖАТЬ кнопку для создания персональной задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1622.aspx">RQ:1622</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (5. Мои задачи)</p>
+<p>Кнопка имеет синий ховер, согласно Ui Core</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/086048A2-8208-4230-8959-52A46EA08203.jpeg"></div></div><div class="hrm-item"><h4 class="hrm-nfr">76.&nbsp;<a name="RQ1623"></a>После клика на кнопку создания персональной задачи Система должна ОТОБРАЖАТЬ МО создания&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1623.aspx">RQ:1623</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>МО создания Персональной задачи существует в Системе. В разделах Календарь и Мой профиль. Скопировать полностью оттуда отображение и функционал</p>
+<p>Отображение дашборда если открыто МО создания Персональной задачи согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=30988%3A195607">
+дизайну&nbsp;</a></p>
+<ul>
+<li>Фон страницы затемнен</li><li>Если требуется время для загрузки &nbsp;МО - добавить стандартный лоадер &nbsp;хурмы на затемненном фоне</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/57AF3B63-5175-45E7-BA6B-99ACD2815E56.jpeg"></div></div><div class="hrm-item"><h4 class="hrm-requirement">77.&nbsp;<a name="RQ1624"></a>После клика на кнопку сохранения персональной задачи система должна СОЗДАТЬ персональную задачу &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1624.aspx">RQ:1624</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">78.&nbsp;<a name="RQ1625"></a>После клика на кнопку сохранения персональной задачи система должна ОТОБРАЖАТЬ МО просмотра персональной задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1625.aspx">RQ:1625</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>МО просмотра персональной задачи существует в системе. В разделах Календарь и Мой профиль. Скопировать полностью оттуда отображение и функционал</p>
+<p>Отображение дашборда если открыто МО создания Персональной задачи согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=30988%3A195607">
+дизайну&nbsp;</a></p>
+<ul>
+<li>Фон страницы затемнен</li><li>Если требуется время для загрузки &nbsp;МО - добавить стандартный лоадер &nbsp;хурмы на затемненном фоне</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1625-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">79.&nbsp;<a name="RQ1626"></a>Если после клика на кнопку сохранения персональной задачи создание не успешно, Система должна ОТОБРАЗИТЬ пользователю фронт-нотификацию&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1626.aspx">RQ:1626</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Отображение нотификации согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=528%3A29">
+IU CORE</a> Without Undo 4</p>
+<p>Тесты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Dashboard-ccd5710114ba4e1b91497096502f3a22#7e65bb5a976440b8a62109de6508af83">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">80.&nbsp;<a name="RQ1512"></a>Как Пользователь я хочу ОТКРЫТЬ любую свою задачу из виджета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1512.aspx">RQ:1512</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">81.&nbsp;<a name="RQ1627"></a>После клика на задачу Система должна ОТКРЫТЬ МО просмотра задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1627.aspx">RQ:1627</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">82.&nbsp;<a name="RQ1628"></a>Система должна ОТОБРАЖАТЬ МО просмотра задачи согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1628.aspx">RQ:1628</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>МО просмотра персональной задачи существует в системе. В разделе Календарь и Мой профиль.</p>
+<p>Нужно полностью скопировать внешний вид.</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1628-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-user-story">83.&nbsp;<a name="RQ1629"></a>Как Пользовать я хочу ПРОСМОТРЕТЬ, ОТПРАВИТЬ, ИЗМЕНИТЬ и УДАЛИТЬ комментарий к задаче&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1629.aspx">RQ:1629</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">84.&nbsp;<a name="RQ1630"></a>Система должна выдать права на Комментирование, Редактирование, Удаление и Просмотр комментариев согласно установленным пермишенам&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1630.aspx">RQ:1630</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Для Рекрутинг действий с шаблоном и без, и по воронке необходимо проверить пермишены из строки "Комментарии к действиям кандидата"</p>
+<p>Для HR-действий с шаблоном и без проверить пермишены из строки "Комментарии к действиям сотрудника"</p>
+<p>&nbsp;</p>
+<p>Логика функционирует сейчас в системе в разделе "Мой профиль - Мои задачи"</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1630-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">85.&nbsp;<a name="RQ1631"></a>Система должна выдать права на Комментирование, Редактирование, Удаление и Просмотр комментариев к персональной задаче по умолчанию, без доп. настроек в роли&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1631.aspx">RQ:1631</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">86.&nbsp;<a name="RQ1632"></a>Как Пользователь я хочу ИЗМЕНИТЬ персональную задачу из МО просмотра задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1632.aspx">RQ:1632</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">87.&nbsp;<a name="RQ1634"></a>Система должна ОТОБРАЖАТЬ кнопку для редактирования согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1634.aspx">RQ:1634</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1634-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">88.&nbsp;<a name="RQ1635"></a>После клика на кнопку редактирования Система должна ЗАМЕНИТЬ МО просмотра на МО редактирования&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1635.aspx">RQ:1635</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">89.&nbsp;<a name="RQ1636"></a>Система должна ОТОБРАЖАТЬ МО редактирования согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1636.aspx">RQ:1636</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>МО редактирования персональной задачи уже есть в системе, в разделе Мой профиль-Мои задачи и Календарь.</p>
+<p>Отображение и поведение МО редактирования необходимо полностью скопировать</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8066.aspx"></div></div><div class="hrm-item"><h4 class="hrm-requirement">90.&nbsp;<a name="RQ1637"></a>После клика на кнопку Сохранения Система должна СОХРАНИТЬ изменения &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1637.aspx">RQ:1637</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">91.&nbsp;<a name="RQ1638"></a>После Сохранения Система должна ЗАМЕНИТЬ МО редактирования на МО просмотра и ОТОБРАЗИТЬ фронт-нотификацию об успешном сохранении&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1638.aspx">RQ:1638</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Отображение нотификации согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=528%3A29">
+IU CORE</a> Without Undo 4</p>
+<p>Тексты и переводы уже есть в системе “Изменения сохранены”</p>
+<p>Расположение и поведение нотификации - уже есть в системе, в разделе Мой профиль-Мои задачи и Календарь</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8065.aspx"></div></div><div class="hrm-item"><h4 class="hrm-nfr">92.&nbsp;<a name="RQ1639"></a>Если сохранить измененную задачу не возможно, Система должна ОТОБРАЗИТЬ фронт-нотификацию Пользователю&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1639.aspx">RQ:1639</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Отображение нотификации согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=528%3A29">
+IU CORE</a> Without Undo 3</p>
+<p>Тесты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Dashboard-ccd5710114ba4e1b91497096502f3a22#7e65bb5a976440b8a62109de6508af83">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">93.&nbsp;<a name="RQ1640"></a>Как Пользователь я хочу УДАЛИТЬ персональную задачу из МО просмотра задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1640.aspx">RQ:1640</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">94.&nbsp;<a name="RQ1641"></a>Система должна ОТОБРАЖАТЬ кнопку для удаления согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1641.aspx">RQ:1641</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1641-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">95.&nbsp;<a name="RQ1642"></a>После клика на кнопку удаления Система должна ОТОБРАЖАТЬ МО с подтверждением удаления&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1642.aspx">RQ:1642</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>МО существует в системе</p>
+<p>Необходимо полностью скопировать отображение и функциональность</p>
+<p>Тексты и переводы есть в системе</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8068.aspx"></div></div><div class="hrm-item"><h4 class="hrm-requirement">96.&nbsp;<a name="RQ1643"></a>После подтверждения удаления Система должна УДАЛИТЬ задачу&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1643.aspx">RQ:1643</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">97.&nbsp;<a name="RQ1644"></a>После удаления задачи Система должна закрыть МО и ОТОБРАЗИТЬ нотификацию об успешном удалении&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1644.aspx">RQ:1644</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Отображение нотификации согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=528%3A29">
+IU CORE</a> Without Undo 3</p>
+<p>Тексты и переводы существуют в системе “Задача удалена"</p>
+<p>Расположение и поведение нотификации скопировать существующее</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1644-Screenshot.png">
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">98.&nbsp;<a name="RQ1645"></a>Если удалить задачу не возможно, Система должна ОТОБРАЗИТЬ фронт-нотификацию Пользователю&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1645.aspx">RQ:1645</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Отображение нотификации согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=528%3A29">
+IU CORE</a> Without Undo 4</p>
+<p>Тесты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Dashboard-ccd5710114ba4e1b91497096502f3a22#7e65bb5a976440b8a62109de6508af83">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">99.&nbsp;<a name="RQ1633"></a>Как Пользователь я хочу ОТКРЫТЬ на отдельную страницу задачу из МО просмотра задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1633.aspx">RQ:1633</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">100.&nbsp;<a name="RQ1646"></a>Система должна ОТОБРАЖАТЬ кнопку для открытия задачи согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1646.aspx">RQ:1646</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Кнопка существует в системе</p>
+<p>Дизайн и расположение необходимо скопировать с существующих задач</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1646-Screenshot.png"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1646-Screenshot(1).png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">101.&nbsp;<a name="RQ1647"></a>После клика на кнопку Система должна ПЕРЕНАПРАВИТЬ Пользователя на страницу просмотра отдельной задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1647.aspx">RQ:1647</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">102.&nbsp;<a name="RQ1648"></a>Система должна ОТОБРАЖАТЬ страницу просмотра задачи согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1648.aspx">RQ:1648</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Страница просмотра задачи существует в системе</p>
+<p>Необходимо делать редирект на существующую страницу&nbsp;</p>
+<p>Пример https://hurmaqa1.hurma.work/events/Z8R</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1648-Screenshot.png">
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">103.&nbsp;<a name="RQ1705"></a>Как Пользователь я хочу СКОПИРОВАТЬ ссылку на задачу&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1705.aspx">RQ:1705</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">104.&nbsp;<a name="RQ1706"></a>Система должна ОТОБРАЖАТЬ кнопку для копирования ссылки на задачу согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1706.aspx">RQ:1706</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Кнопка существует в системе</p>
+<p>Дизайн и расположение необходимо скопировать с существующих задач</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1706-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">105.&nbsp;<a name="RQ1707"></a>После клика на кнопку Система должна ОТОБРАЗИТЬ тултип, который дает Пользователю понять что копирование выполнено успешно&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1707.aspx">RQ:1707</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Тултип существует в системе</p>
+<p>Дизайн и расположение необходимо скопировать с существующих задач</p>
+<p>Переводы текста “Скопировано” есть в системе</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1707-Screenshot.png"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1707-Screenshot(1).png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">106.&nbsp;<a name="RQ1708"></a>После клика на кнопку Система должна ДОБАВИТЬ в буфер обмена ссылку&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1708.aspx">RQ:1708</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">107.&nbsp;<a name="RQ1709"></a>Как Пользователь я хочу ИЗМЕНИТЬ статус задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1709.aspx">RQ:1709</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">108.&nbsp;<a name="RQ1710"></a>Система должна ОТОБРАЖАТЬ селектор с выбором статуса задачи согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1710.aspx">RQ:1710</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Отображение и поведение уже реализовано в системе</p>
+<p>Необходимо скопировать</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1710-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">109.&nbsp;<a name="RQ1711"></a>После клика на статус задачи Система должна УСТАНОВИТЬ выбранный статус задачи&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1711.aspx">RQ:1711</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-requirement">110.&nbsp;<a name="RQ1712"></a>Если статус задачи меняется с "В работе" на "Завершена" после закрытия МО просмотра задачи Система должна СКРЫТЬ эту задачу из виджета и не отображать ее&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1712.aspx">RQ:1712</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;Система должна ДОБАВЛЯТЬ в виджет задачи по Рекрутинг, HR действиям и Персональные задачи, которые имеют статус "в работе"&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1510">RQ:1510</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1510.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">111.&nbsp;<a name="RQ1713"></a>После изменения статуса задачи Система должна закрыть селектор выбора статуса задачи И ОТОБРАЗИТЬ фронт-нотификацию об успешной смене статуса&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1713.aspx">RQ:1713</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Нотификация уже существует в системе</p>
+<p>Тексты и переводы есть в системе</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=16976%3A190699">Дизайн</a> и расположение&nbsp;</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1713-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">112.&nbsp;<a name="RQ1493"></a>Виджет Запросы&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1493.aspx">RQ:1493</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как ответственному/тимлиду, необходимо видеть адресованные мне запросы на согласование отсутствий в одном месте и по месту их утверждать</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=2827ff3f8f65417f8f4c209de4901794"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1493-Screenshot.png"></div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">RQ:1578</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1673">RQ:1673</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1673.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1619">RQ:1619</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1619.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">113.&nbsp;<a name="RQ1773"></a>Система должна по умолчанию ОТОБРАЖАТЬ активным первый таб &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1773.aspx">RQ:1773</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>В зависимости от доступа первый там будет или “Все” или “Я ответственный”</p>
+<p>Если есть два таба, и был выбран второй ("Я ответственный") и перезагружена страница, то система должна установить первый таб, вне зависимости от того, какой был выбран до перезагрузки.</p>
+<table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;Система должна ДОБАВИТЬ в виджет запросы, в которых Пользователь назначен ответственным при наличии разрешающих пермишенов&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1658">RQ:1658</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1658.aspx">»</a>]</small></p></td></tr><tr><td><p>зависит от&nbsp;Система должна ДОБАВИТЬ в виджет запросы из раздела "отпуск и запросы" при наличии разрешающего пермишен на раздел "отпуск и запросы"&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1767">RQ:1767</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1767.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">114.&nbsp;<a name="RQ1777"></a>Если нет доступа на отображени одного из табов Система должна УБРАТЬ отображение названия таба, и счетчик кол-ва запросов в табе ОТОБРАЖАТЬ возле названия виджета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1777.aspx">RQ:1777</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (6.1 и 6.2)</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1777-Screenshot.png">
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">115.&nbsp;<a name="RQ1778"></a>Если нет доступа на отображение всех табов Система должна УБРАТЬ виджет из дашборда&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1778.aspx">RQ:1778</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">116.&nbsp;<a name="RQ1768"></a>Как Пользователь я хочу ПЕРЕЙТИ В список текущих запросов&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1768.aspx">RQ:1768</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">117.&nbsp;<a name="RQ1767"></a>Система должна ДОБАВИТЬ в виджет запросы из раздела "отпуск и запросы" при наличии разрешающего пермишен на раздел "отпуск и запросы"&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1767.aspx">RQ:1767</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Контент (сами Запросы и сотрудники, отправившие запрос) в виджете должен ПОЛНОСТЬЮ соответствовать вкладке “запросы” в разделе “отпуск и запросы”.&nbsp;</p>
+<p>Если в настройки роли, в "компании", разделе “отпуск и запросы” установлен пермишен “НЕТ” таб “Все” скрыт, название таба не отображается.</p>
+<p>Разрешающие пермишены:</p>
+<ul>
+<li>Да</li><li>Свои данные и команды, где менеджер или HR</li><li>Свои данные и все свои команды</li><li>Команды, где менеджер или HR</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1767-Screenshot.png">
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">118.&nbsp;<a name="RQ1513"></a>Система должна ОТОБРАЖАТЬ в виджете таб с доступными запросами и запросы в нем согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1513.aspx">RQ:1513</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (6.1 Запросы. ВСЕ, и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 6 колонок</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#24324bd6f37548dc9e76079cb8d2fc3b">
+notion</a></p>
+<ul>
+<li>В счетчике запросов учитываются запросы доступные для просмотра которые сразу отображены, и которые доступны по кнопке “еще" в выбранном табе</li></ul>
+<p>&nbsp;</p>
+<p><strong>Новое поведение:</strong></p>
+<ul>
+<li>Цифра дней между периодом дней запроса и ответственным берется из “отпуск и запросы”, вкладка “запросы” колонка “дней будет списано”</li><li>При наведении на строку (НЕ ФИО и НЕ Аватар ответственного) с запросом ховер на строке отсутствует, курсор default - т.к по клику НИЧЕГО не происходит, МО в этом релизе нет</li><li>Справа Отображаются аватары ответственных (<span>UPD: НЕ УЧИТЫВАЕМ </span><a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408"><span>настройки глобальной видимости</span></a><span>, отображаются все ответственные добавленные в запрос, в т.ч Пользователь, который просматривает виджет”)</span></li><li><span>UPD: </span><span>Ответственные отображаются в том порядке, в котором были добавлены в запрос (т.е уже НЕ по алфавиту, как было требование раньше)</span></li><li>Если ответственный оставил реакцию или комментарий+реакцию - возле его аватара она отображается</li><li>Если ответственный оставил только комментарий - доп.иконок возле аватара НЕТ</li><li>В тултипах появляется реакция (если есть), и ФИО сдвигается правее, если хоть у одного есть реакция</li><li>Если ни у одного ответственного реакции нет - все ФИО не сдвигаются, остаются как и было</li><li>При наведении на ответственных, если их больше, чем помещается в виджете, присутствует тултип где отображается 10 ответственных (по алфавиту), затем "…"</li><li>При наличии доступов есть ховер + переход в профиль ответственного при клике на аватар, и переход в профиль сотрудника сделавшего запрос, при клике на его ФИО и аватар, описано в общей US
+<a target="_blank" rel="noopener noreferrer" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">
+RQ:1578</a></li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1513-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">119.&nbsp;<a name="RQ1771"></a>Система должна ДОБАВИТЬ на виджет только те запросы, которые имеют статус "в процессе" &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1771.aspx">RQ:1771</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Для понимания:</p>
+<ul>
+<li>В разделе “отпуск и запросы” <i>во вкладке “запросы”</i> отображаются запросы в статусе
+<span>“в процессе”</span>.</li><li>Если запрос утвержден - он переходит <i>во вкладку “Архив запросов”</i> со статусом
+<span>“Утвержден”</span>, и должен исчезать из виджета (все табы)</li><li>Если запрос отклонен - он переходит <i>во вкладку “Архив запросов”</i> со статусом
+<span>“Отклонен”</span>, и должен исчезать из виджета (все табы)</li></ul>
+<p>&nbsp;</p>
+<p>Было бы идеально в виджет эту логику скопировать из вкладки “Запросы” в разделе “Отпуск и запросы” для конкретного Пользователя.</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">120.&nbsp;<a name="RQ1772"></a>Если отсутствуют запросы в статусе "в процессе" из раздела "отпуск и запросы" Пользователя Система должна отображать ОТОБРАЖАТЬ заглушку на виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1772.aspx">RQ:1772</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Возле названия таба в счетчике “0” НЕ ОТОБРАЖАТЬ</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (6.1.0)</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#24324bd6f37548dc9e76079cb8d2fc3b">
+notion</a></p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">121.&nbsp;<a name="RQ1770"></a>Как Пользователь я хочу ПЕРЕЙТИ В список запросов, в которых я ответственный&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1770.aspx">RQ:1770</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">122.&nbsp;<a name="RQ1658"></a>Система должна ДОБАВИТЬ в виджет запросы, в которых Пользователь назначен ответственным при наличии разрешающих пермишенов&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1658.aspx">RQ:1658</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Проверяем права по пермишенам “да”.</p>
+<ul>
+<li>Если есть хоть один - таб отображается</li><li>Если есть два - таб отображается</li><li>Если нет ни одного - таб НЕ отображается</li></ul>
+<p>&nbsp;</p>
+<p>Доступ №1: Настройки роли - профиль - <u>календарь</u> - пермишен “да”</p>
+<p>Доступ №2: Настройки роли - профиль - профиль - пермишен “да” - <u>мои задачи</u> пермишен "да”&nbsp;</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1519-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">123.&nbsp;<a name="RQ1681"></a>Система должна ДОБАВИТЬ на виджет только те запросы, которые имеют статус "в процессе" и статус задачи по запросу "в работе"&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1681.aspx">RQ:1681</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>&nbsp;</p>
+<ul>
+<li>В разделе “отпуск и запросы” <i>во вкладке “запросы”</i> отображаются запросы в статусе
+<span>“в процессе”</span>. - ПЕРВАЯ ПРОВЕРКА</li><li>В профиле сотрудника, <i>во вкладке “мои задачи” </i>в табе “в работе”, отображаются задачи по запросам которые имеют статус “в работе” - ВТОРАЯ ПРОВЕРКА</li><li>Запросы, задачи по котором в статусе “завершенные” на виджете, в табе “я ответственный” НЕ ОТОБРАЖАЮТСЯ</li></ul>
+<p>&nbsp;</p>
+<p><u>Уточнение:</u></p>
+<ul>
+<li>Если запрос утвержден - он переходит <i>во вкладку “Архив запросов”, </i>со статусом
+<span>“Утвержден”</span>, + статус задачи по запросу автоматически меняется на “<span>завершенное</span>” и такой запрос должен исчезать из виджета (все табы).&nbsp;</li><li>Если запрос отклонен - он переходит <i>во вкладку “Архив запросов”</i> со статусом
+<span>“Отклонен”</span>, + статус задачи по запросу автоматически меняется на “<span>завершенное</span>” и такой запрос должен исчезать из виджета (все табы)</li></ul>
+<p><strong>НО если такие запросы вернули обратно в статус “в работе” - они должны отображаться на виджете.</strong></p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">124.&nbsp;<a name="RQ1685"></a>Если отсутствуют запросы, в статусе "в работе" в которых Пользователь назначен ответственным Система должна ОТОБРАЖАТЬ заглушку на виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1685.aspx">RQ:1685</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Возле названия таба в счетчике “0” НЕ ОТОБРАЖАТЬ</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (6.2.0)</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#24324bd6f37548dc9e76079cb8d2fc3b">
+notion</a></p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">125.&nbsp;<a name="RQ1776"></a>Система должна ОТОБРАЖАТЬ в виджете таб с запросы в которых Пользователь назначен ответственным в нем согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1776.aspx">RQ:1776</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (6.2 Запросы. Я ОТВЕТСТВЕННЫЙ, и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 6 колонок</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#24324bd6f37548dc9e76079cb8d2fc3b">
+notion</a></p>
+<ul>
+<li>В счетчике запросов учитываются запросы доступные для просмотра которые сразу отображены, и которые доступны по кнопке “еще" в выбранном табе</li></ul>
+<p>&nbsp;</p>
+<p><strong>Новое поведение:</strong></p>
+<ul>
+<li>Цифра дней между периодом дней запроса и ответственным берется из “отпуск и запросы”, вкладка “запросы” колонка “дней будет списано”</li><li>При наведении на строку (в т.ч ФИО и аватар сделавшего запрос) есть ховер на строку и открывается МО задачи по запросу описано в US
+<a target="_blank" rel="noopener noreferrer" href="https://hurma.spiraservice.net/24/Requirement/1776.aspx">
+RQ:1512</a></li><li><span>Справа Отображаются аватары других ответственных (</span><span>UPD: НЕ УЧИТЫВАЕМ
+</span><a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408"><span>настройки глобальной видимости</span></a><span>, отображаются все ответственные добавленные в запрос, в т.ч Пользователь, который просматривает виджет”</span><span>)</span></li><li><span>Ответственные отображаются в том порядке, в котором были добавлены в запрос (т.е уже НЕ по алфавиту, как было требование раньше)</span></li><li><span>Если ответственный оставил реакцию или комментарий+реакцию - возле его аватара она отображается</span></li><li><span>Настройка в каждом отсутствии никак не влияет на отображения реакций и аватаров “Видимость комментариев ответственному”</span></li><li>Если ответственный оставил только комментарий - доп.иконок возле аватара НЕТ</li><li>В тултипах появляется реакция (если есть), и ФИО сдвигается правее, если хоть у одного есть реакция</li><li>Если ни у одного ответственного реакции нет - все ФИО не сдвигаются, остаются как и было</li><li>При наведении на ответственных, если их больше, чем помещается в виджете, присутствует тултип где отображается 10 ответственных (по алфавиту), затем "…"</li><li><span>UPD:</span> При наличии доступов на самом виджете и в МО просмотра задачи по запросу есть ховер + переход в профиль ответственного при клике на аватар, и переход в профиль сотрудника сделавшего запрос, при клике на его ФИО и аватар, описано в общей US <a target="_blank" rel="noopener noreferrer" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">
+RQ:1578</a></li></ul>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">126.&nbsp;<a name="RQ1514"></a>Как Пользователь я хочу ОТКРЫТЬ любой запрос, в котором я ответственный из виджета&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1514.aspx">RQ:1514</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;Как Пользователь я хочу ИЗМЕНИТЬ статус задачи.&nbsp;В виджете ЗАПРОСЫ, в МО просмотра ЗАДАЧИ по запросу также актуальна стори про смену статуса задачи&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1709">RQ:1709</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1709.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-requirement">127.&nbsp;<a name="RQ1656"></a>После клика на строку с запросом Система должна ОТКРЫТЬ МО задачи по запросу (из Профиль-Мои задачи)&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1656.aspx">RQ:1656</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">128.&nbsp;<a name="RQ1657"></a>Система должна ОТОБРАЖАТЬ МО просмотра запроса согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1657.aspx">RQ:1657</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>МО есть в системе</p>
+<p>Функционал МО и его отображение необходимо <strong>полностью скопировать</strong> из радела “Мой профиль”, вкладки “Мои задачи”,<span>
+</span><span>UPD: </span><span>добавив в эту модалку отображение ответственных:</span></p>
+<ul>
+<li><span>Ответственные отображаются в том порядке, в котором были добавлены в запрос</span></li><li><span>Если ответственный оставил реакцию или комментарий+реакцию - возле его аватара она отображается</span></li><li><span>Если ответственный оставил только комментарий - доп.иконок возле аватара НЕТ</span></li><li><span>При наличии доступов есть ховер + переход в профиль ответственного при клике на аватар, и переход в профиль сотрудника сделавшего запрос, при клике на его ФИО и аватар, описано в общей US
+</span><a target="_blank" rel="noopener noreferrer" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx"><span>RQ:1578</span></a><span>&nbsp;</span></li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1657-Screenshot.png">
+<p>Комментарии в МО просмотра задачи по запросу подчиняются установленным пермишенам + настройкам в каждом отсутствии (чебкокс “<span>Видимость комментариев ответственному”)</span></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1657-Screenshot(1).png"><img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1657-Screenshot(2).png"></div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">129.&nbsp;<a name="RQ1494"></a>Виджет На испытательном периоде&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1494.aspx">RQ:1494</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне как HR надо видеть список людей, которые сейчас на онбординге, чтобы вовремя провести встречи Я как менеджер могу планировать нагрузку на новичков</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=a66333e0cf344b9396ad08f9ef001cc1"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1494-Screenshot.png"></div><div class="hrm-description2"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ПЕРЕЙТИ в профиль сотрудника из виджета.&nbsp;В виджете должна быть добавлена функциональность перехода в профиль Сотрудника&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1578">RQ:1578</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1578.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользовать я хочу ЗАКРЫТЬ весь доступный контент в виджете до дефолтного отображения.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1673">RQ:1673</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1673.aspx">»</a>]</small></p></td></tr><tr><td><p>связано с&nbsp;Как Пользователь я хочу ОТКРЫТЬ весь доступный контент в виджете.&nbsp;В виджете со списками должна быть возможность открывать весь контент со списка&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1619">RQ:1619</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1619.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h4 class="hrm-nfr">130.&nbsp;<a name="RQ1518"></a>Система должна ОТОБРАЖАТЬ в виджете информацию по сотрудникам на испытательном периоде &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1518.aspx">RQ:1518</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (7. На испытательном периоде и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 6 колонок</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#107f6ebff2074d33886ba6d197300818">
+notion</a></p>
+<ul>
+<li>В счетчике сотрудников учитываются доступные для просмотра сотрудников Пользователи на исп.периоде, которые сразу отображены, и которые доступны по кнопке “еще"</li><li>В колонке "команды" отображаются только команды, которых сотрудник добавлен в список сотрудников</li><li>Порядок отображение команд: По алфавиту - цифры.символы, A-Z, А-Я</li><li>Команды пишутся в две строки, новое слово из названия команды переносится на новую строку. Если команды не помещаются в две строки в конце второй строки название команды обрезается троеточием</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">131.&nbsp;<a name="RQ1515"></a>Требования для сортировки в виджете&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1515.aspx">RQ:1515</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>По умолчанию сортировка в виджете установлена по столбцу “окончание” - сверху дата ближайшая к сегодняшней.</p>
+<p>При переключении сортировки список должден перестраиваться.</p>
+<p>&nbsp;</p>
+<p>Активная сортировка имеет отображение c одной стрелочкой</p>
+<p>стрелка <strong>вверх</strong> - сортировка с стандартном положении:</p>
+<ul>
+<li>По алфавиту А-Я,&nbsp;</li><li>По дате начала исп. периода - сверху ближайшая дата к сегодняшней</li><li>По дате окончания исп.периода - сверху ближайшая дата к сегодняшней</li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1515-Screenshot.png">
+<p>стрелка <strong>вниз</strong> - сортировка в обратном положении</p>
+<ul>
+<li>По алфавиту Я-А,</li><li>По дате начала исп. периода - сверху последняя дата из виджета. внизу - ближайшая к сегодняшней</li><li>По дате окончания исп.периода - сверху последняя дата из виджета. внизу - ближайшая к сегодняшней</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">132.&nbsp;<a name="RQ1516"></a>Система должна ДОБАВИТЬ в виджет тех сотрудников, которые доступны согласно пермишенам в роли Пользователя&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1516.aspx">RQ:1516</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Согласно настроек <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/9f98fb96a5344a10a85ec0368df19408">
+глобальной видимости&nbsp;</a></p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">133.&nbsp;<a name="RQ1517"></a>Система должна ДОБАВИТЬ виджет на дашборд, если в роли Пользователя присутствует необходимая комбинация пермишенов&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1517.aspx">RQ:1517</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p><strong>Необходимая комбинация пермишенов проверка по четырем пунктам:</strong></p>
+<ol>
+<li>Есть возможность перейти в профиль сотрудника. <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/f589b1d6a0ef4ac0a15c9877d65592dc">
+Подробнее&nbsp;</a></li><li>Пермишен “да” в настройке роли, раздел “Компания”-<u>Сотрудники</u></li><li>Пермишен “да” &nbsp;в настройке роли, раздел “Компания”-"Сотрудники"-<u>Профиль</u></li></ol>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1517-Screenshot.png">
+<p>4. Есть в настройки роли один из выбранных пермишенов (кроме пермишена “нет”) в "Компания”-"Сотрудники"-"Профиль"-<u>Компания</u></p>
+<p>5. <span>UPD: </span>Включено поле “Испытательный период” “Компания”-"Сотрудники"-Профиль-Компания-поле
+<u>“Испытательный период”</u></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1517-Screenshot(1).png">
+<p><strong>ВАЖНО: </strong>От того, какой пермишен в п.4 выбран зависит то, какие именно сотрудники будут отображаться в виджете</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1517-Screenshot(2).png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">134.&nbsp;<a name="RQ1574"></a>Если в системе отсутствуют сотрудники на исп.периоде Система должна отображать в виджете заглушку &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1574.aspx">RQ:1574</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (7.0)</p>
+<p>Тексты и переводы &nbsp;в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#107f6ebff2074d33886ba6d197300818">
+notion</a></p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">135.&nbsp;<a name="RQ1495"></a>Виджет События&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1495.aspx">RQ:1495</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как руководителю, необходимо акцентировать внимание сотрудников на важных вещах в описании компании: то есть подсвечивать и разделять некоторые блоки, а также дать возможность переходить по ссылкам</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=4460359e19c74bfc85eaa97c86139121"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1495-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">136.&nbsp;<a name="RQ1520"></a>Система должна ОТОБРАЖАТЬ в виджете ближайшие события компании согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1520.aspx">RQ:1520</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (8. Cобытия, и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 3 колонки</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#77e4889219ce4bfda7ba87186e2038a2">
+notion</a></p>
+<ul>
+<li>Отображаются только события, которые имеют <strong>статус “Опубликовано”</strong></li></ul>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1520-Screenshot.png">
+<ul>
+<li>Отображается Только <strong>два</strong> ближайших события</li><li>Сортировка:</li></ul>
+<ol>
+<li>сверху то событие, которое ближе к текущей дате,</li><li>снизу то событие, которое имеет дату следующую после первого события</li></ol>
+<ul>
+<li>Дата и время проведения события отображается согласно <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=809%3A0">
+IU CORE</a></li><li>Ограничение на отображение кол-ва символов в Названии события - без ограничений, и Описании события - в три строки, затем троеточие</li></ul>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">137.&nbsp;<a name="RQ1532"></a>Если события компании отсутствуют, или нет ближайших Система должна ОТОБРАЖАТЬ сам виджет, и в нем заглушку согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1532.aspx">RQ:1532</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (8.0)</p>
+<p>Тексты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Dashboard-ccd5710114ba4e1b91497096502f3a22#de20324e6351434c9979267ba261c960">
+notion</a></p>
+<p>Заглушка отображается если:</p>
+<ul>
+<li>в системе вообще нет опубликованных событий компании</li><li>в системе нет событий компании, которые на сегодня и на будущие даты от сегодня (т.е все что были опубликованы - уже прошли)</li></ul>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">138.&nbsp;<a name="RQ1534"></a>Как Пользователь я хочу ОТКРЫТЬ для просмотра все события компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1534.aspx">RQ:1534</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">139.&nbsp;<a name="RQ1535"></a>Система должна ОТОБРАЖАТЬ в виджете кнопку для просмотра всех событий&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1535.aspx">RQ:1535</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (8. События, 8.0 и 8.1, ховер - уточнить)</p>
+<p>Кнопка отображается всегда, вне зависимости есть ли опубликованные события на любые даты, или нет</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">140.&nbsp;<a name="RQ1571"></a>После клика на кнопку Система должна ПЕРЕНАПРАВИТЬ пользователя на страницу просомотра всех событий компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1571.aspx">RQ:1571</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">141.&nbsp;<a name="RQ1572"></a>Система должна на странице просмотра всех событий компании ОТОБРАЖАТЬ события согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1572.aspx">RQ:1572</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2">
+<p>Пока используем старую страницу, существующую в системе /home/events</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1572-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">142.&nbsp;<a name="RQ1573"></a>После клика на название события на странице просмотра всех событий компании Система должна ПЕРЕНАПРАВИТЬ Пользователя на страницу просмотра одного события&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1573.aspx">RQ:1573</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"><table class="hrm-table hrm-linked"><tbody><tr><td><b>Связанные требования:</b></td></tr><tr><td><p>зависит от&nbsp;Система должна ОТОБРАЖАТЬ страницу просмотра одного события согласно дизайну&nbsp;<small>[<a href="https://hurma.spiraservice.net/24/Report/804/Generated.aspx#RQ1570">RQ:1570</a>]&nbsp;[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1570.aspx">»</a>]</small></p></td></tr></tbody></table></div></div><div class="hrm-item"><h3 class="hrm-user-story">143.&nbsp;<a name="RQ1568"></a>Как пользователь я хочу из виджета ОТКРЫТЬ для просмотра одно из ближайших событий компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1568.aspx">RQ:1568</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-requirement">144.&nbsp;<a name="RQ1569"></a>После клика на название события Система должна ПЕРЕНАПРАВИТЬ Пользователя на страницу просмотра одного события&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1569.aspx">RQ:1569</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h3 class="hrm-user-story">145.&nbsp;<a name="RQ1570"></a>Система должна ОТОБРАЖАТЬ страницу просмотра одного события согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1570.aspx">RQ:1570</a>&nbsp;/&nbsp;User Story]</small></h3><div class="hrm-description2">
+<p>Пока используем старую страницу, существующую в системе /home/events/id</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1573-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">146.&nbsp;<a name="RQ1496"></a>Виджет О компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1496.aspx">RQ:1496</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Проблема:</p>
+<p>Мне, как руководителю, необходимо чтобы у сотрудников информация о будущих событиях компании была перед глазами, и они обращали на них внимание</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=d0c9f8334dfe4947851d776f540bc452"> notion</a></p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1496-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-nfr">147.&nbsp;<a name="RQ1521"></a>Система должна ОТОБРАЖАТЬ в виджете фото компании и информацию о компании согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1521.aspx">RQ:1521</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (9. О компании, и все что правее)</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A211983">Дизайн</a> расположения виджета на дашборде (правее для разных разрешений экранов)</p>
+<p>Размер виджета (ширина) - 3 колонки</p>
+<p>Тексты и переводы - в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/ccd5710114ba4e1b91497096502f3a22#77e4889219ce4bfda7ba87186e2038a2">
+notion</a></p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">148.&nbsp;<a name="RQ1533"></a>Если информация о компании не заполнена Система должна ОТОБРАЖАТЬ сам виджет, и в нем заглушку согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1533.aspx">RQ:1533</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (9.0)</p>
+<p>Тексты и переводы в <a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/Dashboard-ccd5710114ba4e1b91497096502f3a22#0053c437702f49848a03d06b56960880">
+notion</a></p>
+<p>&nbsp;</p>
+</div></div><div class="hrm-item"><h3 class="hrm-user-story">149.&nbsp;<a name="RQ1527"></a>Как Пользователь я хочу ОТКРЫТЬ для просмотра всю информацию о компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1527.aspx">RQ:1527</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">150.&nbsp;<a name="RQ1528"></a>Система должна ОТОБРАЖАТЬ кнопку для просмотра всей информации о компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1528.aspx">RQ:1528</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34351%3A206463">Дизайн</a> (9. О компании, ховер - уточнить )</p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">151.&nbsp;<a name="RQ1529"></a>После клика на кнопку для просмотра всей информации о компании Система должна ПЕРЕНАПРАВИТЬ пользователя на страницу с информацией&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1529.aspx">RQ:1529</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3"></div></div><div class="hrm-item"><h4 class="hrm-nfr">152.&nbsp;<a name="RQ1531"></a>Система должна ОТОБРАЖАТЬ страницу просмотра информации о компании согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1531.aspx">RQ:1531</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Дизайн + описать про хлебные крошки, с помощью которых можно вернуться в обзор</p>
+<p>Пока используем старую страницу, существующую в системе /home/company-info</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1531-Screenshot.png">
+<p>Для Пользователей с правами на редактирование на странице также будет кнопка “редактировать”, функционал описан в ЮС для редактирования RO:1522 (работает как и ранее)</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1531-Screenshot(1).png"></div></div><div class="hrm-item"><h3 class="hrm-user-story">153.&nbsp;<a name="RQ1522"></a>Как Пользователь я хочу ИЗМЕНИТЬ информацию о компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1522.aspx">RQ:1522</a>&nbsp;/&nbsp;User Story]</small></h3></div><div class="hrm-item"><h4 class="hrm-nfr">154.&nbsp;<a name="RQ1523"></a>Система должна ДОБАВИТЬ кнопку для редактирования Пользователям, у которых включен пермишен "да" для Общих настроек в настройках роли&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1523.aspx">RQ:1523</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Пермишен “да” установлен &nbsp;кнопка для редактирования есть в виджете</p>
+<p>Пермишен “нет” установлен - кнопки для редактирования нет в виджете</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/8038.aspx"></div></div><div class="hrm-item"><h4 class="hrm-nfr">155.&nbsp;<a name="RQ1689"></a>Система должна ОТОБРАЖАТЬ кнопку для редактирования информации о компании согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1689.aspx">RQ:1689</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p><a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/aAaWSzOlHUvSF4Jj0VUEbi/HRM-Dev?node-id=34635%3A217016">Дизайн</a> (виджет - о компании справа)</p>
+<p>Не забыть про ховер на кнопку, описан в <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/eyQuGqG0WuqABls2py7cVD/HRM-UI-Core?node-id=234%3A1857">
+UI CORE</a></p>
+</div></div><div class="hrm-item"><h4 class="hrm-requirement">156.&nbsp;<a name="RQ1524"></a>После клика на кнопку для редактирования Система должна ПЕРЕНАПРАВИТЬ Пользователя на страницу редактирования информации о компании &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1524.aspx">RQ:1524</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Страница старая /application-settings/main-info, используем существующую в системе логику</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">157.&nbsp;<a name="RQ1690"></a>Система должна ОТОБРАЖАТЬ страницу редактирования информации о компании согласно дизайну&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1690.aspx">RQ:1690</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Используем существующую страницу в системе со старой логикой и отображением</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1690-Screenshot.png"></div></div><div class="hrm-item"><h4 class="hrm-requirement">158.&nbsp;<a name="RQ1525"></a>После сохранения информации Пользователем Система должна СОХРАНИТЬ внесенные изменения и ПЕРЕНАПРАВИТЬ Пользователя на страницу просмотра Информации и компании&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1525.aspx">RQ:1525</a>&nbsp;/&nbsp;Functional]</small></h4><div class="hrm-description3">
+<p>Страница старая, используем существующую в системе логику</p>
+</div></div><div class="hrm-item"><h4 class="hrm-nfr">159.&nbsp;<a name="RQ1526"></a>После сохранения информации Пользователем Система должна ОТОБРАЗИТЬ нотификацию об успешном/не успешном сохранении измененной информации на странице просмотра Информации и компании &nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1526.aspx">RQ:1526</a>&nbsp;/&nbsp;NFR: Usability]</small></h4><div class="hrm-description3">
+<p>Страница старая, используем существующую в системе логику</p>
+<img src="./Дашборд (релиз 2)_ Переделка страницы на vue.js и добавление новых виджетов [RQ_1480]_files/RQ-1526-Screenshot.png"></div></div><div class="hrm-item"><h3 class="hrm-customer-need" style="page-break-before: always;">160.&nbsp;<a name="RQ1492"></a>Виджет Открытые опросы&nbsp;<small>[<a target="details" href="https://hurma.spiraservice.net/24/Requirement/1492.aspx">RQ:1492</a>&nbsp;/&nbsp;Customer Need]</small></h3><div class="hrm-description2">
+<p>Пока не делаем виджет</p>
+<hr>
+<p>&nbsp;</p>
+<p>Проблема:</p>
+<p>Мне, как руководителю, необходимо чтобы сотрудники видели все непройденные ими опросы - это повысит долю их прохождения и будет давать более точную информацию для принятия решений</p>
+<p>Детальнее в<a target="_blank" rel="noopener noreferrer" href="https://www.notion.so/PRD-2-9537ce02afdc4ca2b3bc5196b04cae6e?p=e121169738e945b5a2dc1ef266eff6d2"> notion</a></p>
+</div></div><script>var title = document.evaluate("//title", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            var h2 = document.evaluate("//h2[contains(@class, 'title')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            title.innerText = h2.innerText;
+
+            var style = document.evaluate("/html/head/style", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            style.parentNode.removeChild(style);
+
+            var print = document.evaluate("/html/body/a", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            print.parentNode.removeChild(print);
+
+            var invalidHeader = document.evaluate("/html/body/div/div[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+            invalidHeader.parentNode.removeChild(invalidHeader);
+
+            var names = [];
+            var as = document.getElementsByTagName('a');
+            for (var a of as) {
+            if (a.name) { names[a.name] = true; }
+            }
+
+            for (var a of as) {
+            var parts = a.href.split('#');
+            if (parts.length != 2) { continue; }
+            if (!parts[1].startsWith('RQ')) { continue; }
+            if (names[parts[1]]) { continue; }
+            a.parentNode.parentNode.parentNode.style.backgroundColor = '#ffdddd';
+            }</script><style>body {
+            background-color: #ffffff;
+            color: #333333;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Arial";
+            font-style: normal;
+            line-height: 1.25;
+            }
+            small {
+            font-size: 80%;
+            font-weight: normal;
+            }
+            .Reports {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: white;
+            overflow-x: auto;
+            }
+            a, a:visited {
+            color: #1155cc;
+            }
+            .title {
+            text-align: center;
+            }
+            .hrm-toc {
+            margin: 0 0 15px;
+            list-style-type: none;
+            }
+            .hrm-toc-feature, .hrm-toc-customer-need, .hrm-toc-user-story {
+            margin: 10px 0 0 0;
+            }
+            .hrm-toc-feature a, .hrm-toc-customer-need a, .hrm-toc-user-story a {
+            color: #555555;
+            font-size: 10pt;
+            font-family: "Arial";
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1.25;
+            text-decoration: none;
+            }
+            .hrm-toc-feature a, .hrm-toc-customer-need a {
+            color: #000000;
+            font-weight: bold;
+            }
+            .hrm-toc-customer-need {
+            margin: 10px 0 0 15px;
+            }
+            .hrm-toc-user-story {
+            margin: 5px 0 0 30px;
+            }
+            .hrm-feature {
+            color: #333333;
+            font-size: 24pt;
+            font-family: "Arial";
+            font-weight: normal;
+            font-style: normal;
+            line-height: 1.25;
+            text-decoration: none;
+            margin: 20px 0 0;
+            }
+            .hrm-customer-need {
+            color: #333333;
+            font-size: 18pt;
+            font-family: "Arial";
+            font-weight: 700;
+            line-height: 1.25;
+            text-decoration: none;
+            margin: 25px 0 5px 0px;
+            padding: 0;
+            }
+            .hrm-feature a, .hrm-customer-need a {
+            color: #333333;
+            }
+            .hrm-user-story {
+            color: #333333;
+            font-size: 18pt;
+            font-weight: normal;
+            font-family: "Arial";
+            line-height: 1.25;
+            text-decoration: none;
+            margin: 25px 0 5px 0;
+            padding: 0;
+            }
+            .hrm-user-story a {
+            color: #333333;
+            }
+            .hrm-requirement {
+            font-weight: 700;
+            font-size: 11pt;
+            font-family: "Arial";
+            line-height: 1.25;
+            text-decoration: none;
+            margin: 20px 0 5px 0;
+            padding: 0;
+            }
+            .hrm-requirement a, .hrm-linked a {
+            color: #333333;
+            }
+            .hrm-nfr {
+            color: #333333;
+            font-weight: 700;
+            font-size: 11pt;
+            font-family: "Arial";
+            line-height: 1.25;
+            text-decoration: none;
+            margin: 20px 0 5px 0;
+            padding: 0;
+            }
+            .hrm-nfr a {
+            color: #333333;
+            }
+            .hrm-description2 {
+            margin: 5px 0;
+            }
+            .hrm-description3 {
+            margin: 5px 0 5px 0;
+            }
+            figure.image {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            }
+            figure.image img, .hrm-description3 img {
+            max-width: 100%;
+            }
+            .hrm-item ul, .hrm-item ol {
+            padding-inline-start: 25px;
+            margin-block-start: 0;
+            }
+            .hrm-item p {
+            margin-block-end: 0;
+            }
+            .hrm-table {
+            margin: 15px 0 0 0;
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 100%;
+            }
+            .hrm-table a {
+            color: #333;
+            }
+            .hrm-table th {
+            text-align: left;
+            padding: 7px;
+            margin: 0;
+            white-space: nowrap;
+            font-weight: bold;
+            border-spacing: 0;
+            border-collapse: collapse;
+            }
+            .hrm-table td {
+            padding: 5px 0;
+            margin: 0;
+            border-spacing: 0;
+            border-collapse: collapse;
+            line-height: 1.25;
+            }
+            .hrm-table td p {
+            padding: 0;
+            margin: 0;
+            text-indent: 0;
+            line-height: 1.25;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            }
+            .hrm-auto {
+            width: auto;
+            }
+            .hrm-nowrap {
+            white-space: nowrap;
+            }
+            .hrm-bold {
+            font-weight: bold;
+            }
+            .comments {
+            background-color: #fff9f1;
+            }
+            .hrm-table .comments td {
+            padding: 7px;
+            }</style>
+    </div>
+  
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
